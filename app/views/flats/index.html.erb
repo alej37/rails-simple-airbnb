@@ -8,6 +8,10 @@
     <span><%= flat.price_per_night %></span>
     <i><%= flat.number_of_guests %></i>
     <%= link_to 'more info', flat_path(flat) %>
+    <%= link_to 'Delete',
+      flat_path(flat),
+      method: :delete,
+      data: { confirm: 'are you sure?'} %>
   <% end %>
 </div>
 
