@@ -1,4 +1,5 @@
 <h1>All of our Flats (<%= @flats.count %>)</h1>
+<%= link_to 'add a new flat', new_flat_path %>
 
 <div class="container">
   <% @flats.each do |flat| %>
@@ -6,6 +7,7 @@
     <p><%= flat.description %></p>
     <span><%= flat.price_per_night %></span>
     <i><%= flat.number_of_guests %></i>
-
+    <%= link_to 'more info', flat_path(flat) %>
   <% end %>
 </div>
+
